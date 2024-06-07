@@ -2,9 +2,13 @@ package davide.prelati.entities;
 
 import davide.prelati.enums.Periodicita;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 
 @Entity
 public class Rivista extends Catalogo {
+
+    @Enumerated(EnumType.STRING)
     private Periodicita periodicita;
 
     public Rivista() {
