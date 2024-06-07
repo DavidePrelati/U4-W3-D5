@@ -2,6 +2,8 @@ package davide.prelati.entities;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "catalogo")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
@@ -14,6 +16,9 @@ public abstract class Catalogo {
     protected String titolo;
     protected int anno_pubblicazione;
     protected int num_pagine;
+
+    @OneToMany(mappedBy = "catalogo")
+    protected List<Prestito> prestiti;
 
     public Catalogo() {
 

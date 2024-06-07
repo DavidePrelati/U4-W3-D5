@@ -9,6 +9,10 @@ public class Libro extends Catalogo {
     private String autore;
     private String genere;
 
+    public Libro() {
+
+    }
+
     public Libro(String titolo, int anno_pubblicazione, int num_pagine, String autore, String genere) {
         super(titolo, anno_pubblicazione, num_pagine);
         this.autore = autore;
